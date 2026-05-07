@@ -1,0 +1,367 @@
+/* Dashboard Styles */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.dashboard-header {
+  animation: slideDown 0.4s ease-out;
+}
+
+.dashboard-header h2 {
+  color: #1e4d8b;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: #6c757d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.stat-card.stat-primary {
+  border-left-color: #1e4d8b;
+}
+
+.stat-card.stat-secondary {
+  border-left-color: #f77f00;
+}
+
+.stat-card.stat-info {
+  border-left-color: #0dcaf0;
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 25px rgba(30, 77, 139, 0.2);
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #1e4d8b 0%, #2d6cb8 100%);
+  color: white;
+  flex-shrink: 0;
+}
+
+.stat-card.stat-secondary .stat-icon {
+  background: linear-gradient(135deg, #f77f00 0%, #fcbf49 100%);
+}
+
+.stat-card.stat-info .stat-icon {
+  background: linear-gradient(135deg, #0dcaf0 0%, #0d6efd 100%);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stat-content h3 {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #212529;
+  font-weight: 700;
+}
+
+.stat-trend {
+  font-size: 0.8rem;
+  color: #198754;
+  font-weight: 500;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h3 {
+  color: #1e4d8b;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.link-primary {
+  color: #1e4d8b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link-primary:hover {
+  color: #2d6cb8;
+}
+
+/* Allocations List */
+.allocations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.allocation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #fafbfc;
+  transition: all 0.2s ease;
+}
+
+.allocation-item:hover {
+  border-color: #1e4d8b;
+  background-color: #f8f9fa;
+}
+
+.allocation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.allocation-info h4 {
+  margin: 0;
+  color: #1e4d8b;
+  font-size: 1rem;
+}
+
+.allocation-info p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.allocation-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #198754;
+  margin: 0 1rem;
+}
+
+.badge {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.25rem;
+}
+
+.badge-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.badge-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.badge-info {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.badge-warning {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+/* Resources Grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.resource-card {
+  padding: 1rem;
+  border: 2px solid #dee2e6;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.resource-card:hover {
+  border-color: #1e4d8b;
+  box-shadow: 0 4px 12px rgba(30, 77, 139, 0.1);
+}
+
+.resource-type {
+  display: inline-block;
+  background-color: #1e4d8b;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.resource-card h5 {
+  margin: 0.5rem 0;
+  color: #212529;
+}
+
+.resource-quantity {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0.5rem 0;
+}
+
+/* Quick Tips */
+.quick-tips {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #e7f3ff 0%, #f0f8ff 100%);
+  border-left: 4px solid #0dcaf0;
+  border-radius: 0.5rem;
+}
+
+.tips-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tips-header h4 {
+  margin: 0;
+  color: #0c5aa6;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tips-list li {
+  color: #0c5aa6;
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    gap: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .allocation-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .allocation-amount {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
